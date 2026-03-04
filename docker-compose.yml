@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  datascience-demo:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - JUPYTER_TOKEN=root
+      - JULIA_VERSION=1.7.1
+    volumes:
+      - ./notebooks:/home/jovyan/notebooks
+    ports:
+      - 8888:8888
+    container_name: datascience
