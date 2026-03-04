@@ -5,8 +5,9 @@ services:
       context: .
       dockerfile: Dockerfile
     environment:
-      - JUPYTER_TOKEN=root
-      - JULIA_VERSION=1.7.1
+      - [cite_start]JUPYTER_TOKEN=root [cite: 1]
+      - [cite_start]JULIA_VERSION=1.7.1 [cite: 1]
+      - POWER_BI_ENDPOINT=https://api.powerbi.com/beta/your-long-key-here
     volumes:
       - ./notebooks:/home/jovyan/notebooks
     ports:
